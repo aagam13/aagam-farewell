@@ -282,10 +282,24 @@ function clearSearch() {
   input.focus();
 }
 
+// ===== AUTO-SORT ON LOAD =====
+function sortCardsOnLoad() {
+  const grid = document.getElementById('cardsGrid');
+  const cards = Array.from(grid.querySelectorAll('.card-wrapper'));
+  cards.sort((a, b) => {
+    const nameA = (a.dataset.name || '').toLowerCase();
+    const nameB = (b.dataset.name || '').toLowerCase();
+    return nameA.localeCompare(nameB);
+  });
+  cards.forEach(card => grid.appendChild(card));
+}
+
 // ===== INIT =====
 document.addEventListener('DOMContentLoaded', () => {
+  sortCardsOnLoad();
   initParticles();
   revealCards();
   initTilt();
   initSearch();
 });
+

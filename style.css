@@ -604,12 +604,176 @@ body {
 }
 
 /* ===== RESPONSIVE ===== */
-@media (max-width: 600px) {
+/* ===== RESPONSIVE — TABLET (≤768px) ===== */
+@media (max-width: 768px) {
   :root {
-    --card-w: 280px;
-    --card-h: 320px;
+    --card-w: 260px;
+    --card-h: 340px;
   }
+
+  .hero-content {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .hero-instruction {
+    font-size: 0.88rem;
+  }
+
+  .cards-section {
+    padding: 4rem 1.25rem;
+  }
+
+  .section-header {
+    margin-bottom: 2.5rem;
+  }
+
   .cards-grid {
     gap: 1.5rem;
+  }
+
+  .search-wrapper {
+    max-width: 100%;
+    padding: 0 0.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .footer {
+    padding: 3rem 1.5rem;
+  }
+}
+
+/* ===== RESPONSIVE — MOBILE (≤480px) ===== */
+@media (max-width: 480px) {
+  :root {
+    --card-w: min(88vw, 320px);
+    --card-h: 360px;
+  }
+
+  /* Hero */
+  .hero {
+    min-height: 100svh;
+  }
+
+  .hero-content {
+    padding: 1.25rem 1rem;
+  }
+
+  .hero-eyebrow {
+    font-size: 0.72rem;
+    letter-spacing: 0.25em;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .hero-instruction {
+    font-size: 0.83rem;
+    margin-bottom: 2rem;
+  }
+
+  .hero-divider {
+    margin: 1rem auto;
+  }
+
+  .divider-line {
+    width: 50px;
+  }
+
+  .scroll-btn {
+    padding: 0.75rem 1.75rem;
+    font-size: 0.88rem;
+  }
+
+  /* Cards section */
+  .cards-section {
+    padding: 3rem 1rem;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .section-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .section-header {
+    margin-bottom: 2rem;
+  }
+
+  /* Grid — single column centered */
+  .cards-grid {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.25rem;
+  }
+
+  /* Card back — allow taller content to scroll */
+  .card-face {
+    padding: 1.25rem 1rem;
+    gap: 0.6rem;
+  }
+
+  .card-back {
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .card-back-icon {
+    font-size: 2rem;
+  }
+
+  .card-message {
+    font-size: 0.9rem;
+    line-height: 1.7;
+  }
+
+  .friend-name {
+    font-size: 1.25rem;
+  }
+
+  .card-avatar {
+    width: 68px;
+    height: 68px;
+    font-size: 2rem;
+  }
+
+  /* Search bar */
+  .search-wrapper {
+    padding: 0;
+    margin-bottom: 1.75rem;
+  }
+
+  .search-box {
+    padding: 0.65rem 1rem;
+    border-radius: 40px;
+  }
+
+  .search-input {
+    font-size: 0.9rem;
+  }
+
+  .sort-label {
+    display: none;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 2.5rem 1.25rem;
+  }
+
+  .footer-quote {
+    font-size: 1.1rem;
+  }
+
+  .footer-name {
+    font-size: 0.9rem;
+  }
+
+  .footer-hearts {
+    gap: 0.5rem;
+    font-size: 1rem;
   }
 }
